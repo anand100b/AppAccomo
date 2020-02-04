@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".activities.AddAdActivity"
+    tools:showIn="@layout/activity_add_ad">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="600dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.03" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.97" />
+
+        <TextView
+            android:id="@+id/categoryTextView"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:text="Category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#181111"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/typeTextView"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:text="Type"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="#181111"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/categoryEditText" />
+
+        <EditText
+            android:id="@+id/categoryEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/categoryTextView" />
+
+        <EditText
+            android:id="@+id/typeEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/typeTextView" />
+
+        <EditText
+            android:id="@+id/descriptionEditText"
+            android:layout_width="0dp"
+            android:layout_height="82dp"
+            android:layout_marginTop="12dp"
+            android:ems="10"
+            android:hint="write the description of your ad"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/typeEditText" />
+
+        <Button
+            android:id="@+id/postButton"
+            android:layout_width="356dp"
+            android:layout_height="41dp"
+            android:background="@color/red"
+            android:text="POST"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/descriptionEditText"
+            app:layout_constraintVertical_bias="0.156" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>

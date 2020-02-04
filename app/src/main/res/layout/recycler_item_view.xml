@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+
+    app:cardMaxElevation="8dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false"
+    app:strokeColor="#00FFFFFF">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#34D18080"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="5dp">
+
+        <TextView
+            android:id="@+id/categoryName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/typeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/categoryName" />
+
+        <TextView
+            android:id="@+id/adDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/typeName" />
+
+        <Button
+            android:id="@+id/smsButton"
+            android:layout_width="118dp"
+            android:layout_height="46dp"
+            android:background="@color/red"
+            android:text="SMS"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.537"
+            app:layout_constraintStart_toEndOf="@+id/callButton"
+            app:layout_constraintTop_toBottomOf="@+id/adDescription"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/callButton"
+            android:layout_width="127dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginLeft="52dp"
+            android:layout_marginTop="19dp"
+            android:background="@color/red"
+            android:text="call"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adDescription"
+            app:layout_constraintVertical_bias="0.567" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

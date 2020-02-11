@@ -1,4 +1,4 @@
-package com.example.myappaccomo.ui.tools;
+package com.example.myappaccomo.ui.settings;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,14 +14,14 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myappaccomo.R;
 
-public class ToolsFragment extends Fragment {
+public class SettingsFragment extends Fragment {
 
-    private ToolsViewModel toolsViewModel;
+    private SettingsViewModel toolsViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         toolsViewModel =
-                ViewModelProviders.of(this).get(ToolsViewModel.class);
+                ViewModelProviders.of(this).get(SettingsViewModel.class);
         View root = inflater.inflate(R.layout.fragment_settings, container, false);
         final TextView textView = root.findViewById(R.id.text_tools);
         toolsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {

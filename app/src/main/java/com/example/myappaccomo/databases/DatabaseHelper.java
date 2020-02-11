@@ -29,8 +29,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
 
     private static final String COL_USER_EMAIL = "user_email";
 
-//    private static final String COL_USER_PHONE = "user_phone";
-
     private static final String COL_USER_PASSWORD = "user_password";
 
 
@@ -105,7 +103,6 @@ public class DatabaseHelper extends SQLiteOpenHelper
                 user.setId(Integer.parseInt(cursor.getString(cursor.getColumnIndex(COL_USER_ID))));
                 user.setName(cursor.getString(cursor.getColumnIndex(COL_USER_NAME)));
                 user.setEmail(cursor.getString(cursor.getColumnIndex(COL_USER_EMAIL)));
-//                user.setPhone(cursor.getDouble(cursor.getColumnIndex(COL_USER_PHONE)));
                 user.setPassword(cursor.getString(cursor.getColumnIndex(COL_USER_PASSWORD)));
                 // Adding user record to list
                 userList.add(user);

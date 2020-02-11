@@ -42,43 +42,16 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log_in);
-        getSupportActionBar().hide();
+        getSupportActionBar();
 
         initViews();
         initListeners();
         initObjects();
-
-//        textView = findViewById(R.id.signUpTextView);
-//        textView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openSignUpActivity();
-//
-//            }
-//        });
-//
-//        textView = findViewById(R.id.forgetPasswordTextView);
-//        textView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openForgetPassword();
-//            }
-//        });
-//
-//        signInButton = findViewById(R.id.signInButton);
-//        signInButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                openNewPage();
-//            }
-//        });
-
-
     }
 
 
     private void initViews() {
-        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+        NestedScrollView view = (NestedScrollView) findViewById(R.id.nestedScrollView);
 
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
         textInputLayoutPassword = (TextInputLayout) findViewById(R.id.textInputLayoutPassword);
@@ -91,19 +64,11 @@ public class LogInActivity extends AppCompatActivity implements View.OnClickList
         textViewLinkRegister = (AppCompatTextView) findViewById(R.id.textViewLinkRegister);
 
     }
-//        editText = findViewById(R.id.emailEditTextLogin);
-//        editText = findViewById(R.id.passwordEditTextLogin);
-//        signInButton = findViewById(R.id.signInButton);
-//        textView = findViewById(R.id.signUpTextView);
-//        textView =findViewById(R.id.forgetPasswordTextView);
 
     private void initListeners() {
         appCompatButtonLogin.setOnClickListener(this);
         textViewLinkRegister.setOnClickListener(this);
     }
-//        signInButton.setOnClickListener(this);
-//        textView.setOnClickListener(this);
-//        textView.setOnClickListener(this);
 
 
 

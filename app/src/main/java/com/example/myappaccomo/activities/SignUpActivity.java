@@ -11,6 +11,7 @@ import androidx.appcompat.widget.AppCompatTextView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.widget.NestedScrollView;
 
+import com.example.myappaccomo.MainActivity;
 import com.example.myappaccomo.R;
 import com.example.myappaccomo.databases.DatabaseHelper;
 import com.example.myappaccomo.entities.User;
@@ -46,7 +47,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        getSupportActionBar().hide();
+        getSupportActionBar();
 
         initViews();
         initListeners();
@@ -54,7 +55,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     }
 
     private void initViews() {
-        nestedScrollView = (NestedScrollView) findViewById(R.id.nestedScrollView);
+        NestedScrollView view = (NestedScrollView) findViewById(R.id.nestedScrollView);
+
 
         textInputLayoutName = (TextInputLayout) findViewById(R.id.textInputLayoutName);
         textInputLayoutEmail = (TextInputLayout) findViewById(R.id.textInputLayoutEmail);
@@ -130,8 +132,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             databaseHelper.addUser(user);
 
             // Snack Bar to show success message that record saved successfully
-            Snackbar.make(nestedScrollView, getString(R.string.success_message), Snackbar.LENGTH_LONG).show();
-            emptyInputEditText();
+            Snackbar.make(nestedScrollView, "Registered, Welcome", Snackbar.LENGTH_LONG).show();
+              emptyInputEditText();
+            Intent accountsIntent = new Intent(activity, MainActivity.class);
+            accountsIntent.putExtra("EMAIL", textInputEditTextEmail.getText().toString().trim());
+startActivity(accountsIntent);
 
 
         } else {

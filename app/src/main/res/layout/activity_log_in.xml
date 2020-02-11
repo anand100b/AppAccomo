@@ -9,7 +9,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:paddingTop="20dp"
-    tools:context=".activities.LogInActivity">
+    tools:context=".MainActivity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -18,26 +18,10 @@
 
 
         <androidx.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp">
-
-            <androidx.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_name"
-                android:inputType="text"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </androidx.support.design.widget.TextInputLayout>
-
-        <androidx.support.design.widget.TextInputLayout
             android:id="@+id/textInputLayoutEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
+            android:layout_marginTop="40dp">
 
             <androidx.support.design.widget.TextInputEditText
                 android:id="@+id/textInputEditTextEmail"
@@ -65,37 +49,21 @@
                 android:textColor="@android:color/white" />
         </androidx.support.design.widget.TextInputLayout>
 
-        <androidx.support.design.widget.TextInputLayout
-            android:id="@+id/textInputLayoutConfirmPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp">
-
-            <androidx.support.design.widget.TextInputEditText
-                android:id="@+id/textInputEditTextConfirmPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/hint_confirm_password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:textColor="@android:color/white" />
-        </androidx.support.design.widget.TextInputLayout>
-
         <androidx.support.v7.widget.AppCompatButton
-            android:id="@+id/appCompatButtonRegister"
+            android:id="@+id/appCompatButtonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:background="@color/colorTextHint"
-            android:text="@string/text_register" />
+            android:text="@string/text_login" />
 
         <androidx.support.v7.widget.AppCompatTextView
-            android:id="@+id/appCompatTextViewLoginLink"
+            android:id="@+id/textViewLinkRegister"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:gravity="center"
-            android:text="Already a member? Login"
+            android:text="@string/text_not_member"
             android:textSize="16dp" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.core.widget.NestedScrollView>

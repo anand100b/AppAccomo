@@ -20,11 +20,19 @@ public class AdDatabaseHelper extends SQLiteOpenHelper {
     private static final Integer DATABASE_VERSION = 1;
     private static final String TABLE_NAME ="ad";
 
-    private static final String COL_ID ="ID";
 
+    //---------- Table for ad-------
+    private static final String COL_ID ="ID";
     private static final String COL_CATEGORY ="CATEGORY";
     private static final String COL_TYPE ="TYPE";
     private static final String COL_DESCRIPTION="DESCRIPTION";
+
+
+    //-------Table for ID----------
+
+
+
+
 
 
     private static final String CREATE_TABLE_ST ="CREATE TABLE " + TABLE_NAME + "(" + COL_ID +
@@ -39,7 +47,6 @@ public class AdDatabaseHelper extends SQLiteOpenHelper {
     //adding more queries
     private static final String GET_LAST_INSERTED_ID = "SELECT SEQ FROM SQLITE_SEQUENCE WHERE NAME = ?";
     private static final String GET_AD_BY_ID = "SELECT " + COL_ID + ", " + COL_CATEGORY + ", " + COL_TYPE + ", " + COL_DESCRIPTION +   " FROM " + TABLE_NAME + " WHERE " + COL_ID + "= ?";
-
 
 
 
